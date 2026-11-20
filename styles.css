@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f5f9;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+    padding: 1rem;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 340px;
+    background-color: #1e293b;
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow:
+        0 20px 25px -5px rgba(0, 0, 0, 0.2),
+        0 8px 10px -6px rgba(0, 0, 0, 0.15);
+}
+
+/* Display Area */
+.display {
+    background-color: #0f172a;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    min-height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    min-height: 1.25rem;
+}
+
+.current-operand {
+    color: #f8fafc;
+    font-size: 2.15rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Button Grid */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.65rem;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 1.1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #334155;
+    color: #f8fafc;
+    transition:
+        background-color 0.15s ease,
+        transform 0.08s ease;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: #475569;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+/* Utility Buttons (AC, DEL) */
+.btn-utility {
+    background-color: #64748b;
+    color: #ffffff;
+}
+
+.btn-utility:hover {
+    background-color: #94a3b8;
+}
+
+/* Operator Buttons (+, −, ×, ÷) */
+.btn-operator {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-operator:hover {
+    background-color: #3b82f6;
+}
+
+/* Equals Button (=) */
+.btn-equals {
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+.btn-equals:hover {
+    background-color: #22c55e;
+}
